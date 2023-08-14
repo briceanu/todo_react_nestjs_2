@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Catamaran:wght@600&family=Cinzel+Decorative:wght@700&family=Racing+Sans+One&family=Righteous&display=swap');
+$font-bruno: 'Bruno Ace SC', cursive;
+
+$breakpoints: (
+  'xs': 0,
+  'sm': 480px,
+  'md': 720px,
+  'lg': 960px,
+  'xl': 1200px,
+);
+@mixin md {
+  @media (max-width: map-get($breakpoints,md)) {
+    @content;
+  }
+}
+@mixin sm {
+  @media (max-width: map-get($breakpoints,sm)) {
+    @content;
+  }
+}
